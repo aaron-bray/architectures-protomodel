@@ -1,0 +1,23 @@
+/* Distributed under the Apache License, Version 2.0.
+   See accompanying NOTICE file for details.*/
+
+syntax = "proto3";
+package protomodel.cdm.bind;
+option optimize_for = SPEED;
+
+message Object1Data
+{
+  double                                 Foo_mg_per_mL          = 1;
+}
+
+message Object2Data
+{
+  double                                 Bar_mL_per_s           = 2;
+}
+
+message AlgorithmData
+{
+  Object1Data                            Object1                = 1;
+  
+  repeated Object2Data                   Object2                = 2;
+}
